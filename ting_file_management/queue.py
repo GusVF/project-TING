@@ -21,3 +21,13 @@ class Queue(AbstractQueue):
             raise IndexError("Índice Inválido ou Inexistente")
 
         return self._data[index]
+
+
+# if __name__ == "__main__":
+#     queue = Queue()
+# queue.enqueue(5)
+# queue.enqueue(15)
+# queue.enqueue(25)
+# queue.enqueue(35)
+# for n in queue._data:
+#     print(n)
