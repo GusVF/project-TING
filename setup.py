@@ -7,3 +7,4 @@ setup(
     tests_require=["pytest"],
     packages=["ting_file_management", "ting_word_searches"],
 )
+# Setup do projeto
