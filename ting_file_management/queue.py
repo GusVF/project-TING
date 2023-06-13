@@ -8,6 +8,12 @@ class Queue(AbstractQueue):
     def __len__(self):
         return len(self._data)
 
+    def size(self):
+        return len(self._data)
+
+    def is_empty(self):
+        return not self.size()
+
     def enqueue(self, value):
         self._data.append(value)
 

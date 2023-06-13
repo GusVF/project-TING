@@ -26,8 +26,19 @@ def process(path_file, instance):
 process(text_file, queue_instance)
 
 
-def remove(instance):
-    """Aqui irá sua implementação"""
+def remove(instance=queue_instance):
+    if instance.is_empty():
+        print("Não há elementos")
+        return
+
+    if instance.contains_file(text_file):
+        instance.dequeue()
+        print(f'Arquivo {text_file} removido com sucesso')
+        return
+
+
+result = remove(queue_instance)
+print(result)
 
 
 def file_metadata(instance, position):
