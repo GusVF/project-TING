@@ -53,4 +53,3 @@ def file_metadata(instance, position):
 
 
 result1 = file_metadata(queue_instance, 0)
-
