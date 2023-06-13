@@ -1,6 +1,6 @@
 from ting_file_management.file_management import txt_importer
 from ting_file_management.queue import Queue
-
+import sys
 
 queue_instance = Queue()
 text_file = "statics/arquivo_teste.txt"
@@ -37,9 +37,20 @@ def remove(instance=queue_instance):
         return
 
 
-result = remove(queue_instance)
-print(result)
+# result = remove(queue_instance)
+# print(result)
 
 
 def file_metadata(instance, position):
-    """Aqui irá sua implementação"""
+    try:
+        file_data = instance.search(position)
+        if file_data:
+            print(file_data)
+        else:
+            sys.stderr.write('Posição inválida')
+    except IndexError:
+        sys.stderr.write('Posição inválida')
+
+
+result1 = file_metadata(queue_instance, 0)
+

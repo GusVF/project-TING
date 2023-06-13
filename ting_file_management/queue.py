@@ -33,3 +33,8 @@ class Queue(AbstractQueue):
             if item["nome_do_arquivo"] == path_file:
                 return True
         return False
+
+    def peek(self):
+        if self.is_empty():
+            return None
+        return self._data[0]
