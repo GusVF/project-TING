@@ -16,4 +16,3 @@ def txt_importer(path_file):
 
 text_file = "statics/arquivo_teste.txt"
 result = txt_importer(text_file)
-print(result)

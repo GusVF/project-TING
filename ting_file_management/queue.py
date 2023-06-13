@@ -22,12 +22,8 @@ class Queue(AbstractQueue):
 
         return self._data[index]
 
-
-# if __name__ == "__main__":
-#     queue = Queue()
-# queue.enqueue(5)
-# queue.enqueue(15)
-# queue.enqueue(25)
-# queue.enqueue(35)
-# for n in queue._data:
-#     print(n)
+    def contains_file(self, path_file):
+        for item in self._data:
+            if item["nome_do_arquivo"] == path_file:
+                return True
+        return False
